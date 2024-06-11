@@ -1,9 +1,9 @@
 import {Inter} from "next/font/google";
 import "./globals.scss";
 import Head from 'next/head';
-import Header from "@/Components/Header";
-import Footer from "@/Components/Footer";
-import SVG from "@/Components/SVG";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
+import SVG from "../Components/SVG";
 
 const inter = Inter({subsets: ["latin"]});
 

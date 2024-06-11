@@ -8,8 +8,10 @@
   justify-content: space-between;
   align-items: center;
 
-  width: 100%;
-  padding: 2.437rem 2.625rem;
+  width: 93.75%;
+  margin: 0 auto;
+  max-width: 84.375rem;
+  padding: 2.437rem 0;
 }
 
 .logo {
@@ -32,13 +34,13 @@
 
 .footerNav {
   width: 28.741%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-row-gap: 1.312rem;
+  grid-template-columns: auto auto auto;
 }
 
 .footerNavLink {
-  width: 33%;
-  margin-bottom: 1.312rem;
+display: block;
 
   a {
     color: white;
