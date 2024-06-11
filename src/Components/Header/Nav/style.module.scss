@@ -1,0 +1,16 @@
+.navList {
+  display: flex;
+  list-style-type: none;
+}
+
+.navLink {
+  a {
+    color: black;
+    text-transform: capitalize;
+    text-decoration: none;
+  }
+
+  &:not(:last-child) {
+    margin-right: 1.79rem;
+  }
+}
