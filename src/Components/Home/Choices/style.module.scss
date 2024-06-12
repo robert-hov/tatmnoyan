@@ -1,0 +1,54 @@
+.choices {
+  margin-bottom: 5.062rem;
+  padding-bottom: 6.312rem;
+}
+
+.choicesWrapper {
+  padding-top: 10.125rem;
+  padding-bottom: 8rem;
+
+  background-color: var(--black);
+}
+
+.choicesContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.choicesImg {
+  position: relative;
+  width: 40.871%;
+  margin-top: -3.062rem;
+  margin-bottom: -14.312rem;
+
+  &::after {
+    content: "";
+    display: block;
+    padding-top: 155.533%;
+  }
+}
+
+.choicesContent {
+  display: flex;
+  flex-direction: column;
+  width: 35.279%;
+}
+
+.choicesTitleWrapper {
+  margin-bottom: 1.25rem;
+}
+//
+//.choicesTitle {
+//  margin-bottom: 1.25rem;
+//
+//  color: var(--white);
+//
+//  font-size: 5rem;
+//  text-transform: uppercase;
+//}
+
+.choicesDesc {
+  margin-bottom: 1.25rem;
+
+  color: var(--white);
+}

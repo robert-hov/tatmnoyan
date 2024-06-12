@@ -1,0 +1,29 @@
+.hero {
+  position: relative;
+  width: 100%;
+  background-image: url("../../../../public/img/hero.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  //background-attachment: fixed;
+  background-size: cover;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 39.93%;
+  }
+}
+
+.heroTitle {
+  position: absolute;
+  top: 50%;
+  left: 5.87rem;
+  transform: translateY(-60%);
+  width: 34.125rem;
+
+  color: var(--white);
+
+  font-size: 6.875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
