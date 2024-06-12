@@ -37,9 +37,11 @@ const Choices = () => {
                             {/*<Link href={'/'} className={styles.choiceLink}>*/}
                             {/*    Shop Now*/}
                             {/*</Link>*/}
+                            <div className={styles.choicesLinkWrapper}>
                             <LinkComp bigLine href={'/'} color={'white'} size={18}>
                                 Shop Now
                             </LinkComp>
+                            </div>
                         </div>
                     </div>
                 </div>
