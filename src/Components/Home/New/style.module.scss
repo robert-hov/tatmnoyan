@@ -1,0 +1,38 @@
+.new {
+  padding-top: 9.937rem;
+}
+
+.newContainer {
+  position: relative;
+  padding-top: 11.312rem;
+  padding-bottom: 12.562rem;
+  background-color: var(--silver-chalice);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.newImg {
+  position: absolute;
+  left: 0;
+  bottom: 4rem;
+  width: 37.083%;
+  max-width: 534px;
+
+  &::after {
+    content: "";
+    display: block;
+    padding-top: 145.692%;
+  }
+}
+
+.newContent {
+  display: flex;
+  flex-direction: column;
+  width: 43.888%;
+  margin-right: 4.062rem;
+}
+
+.newTitle {
+  margin-bottom: 1.812rem;
+}

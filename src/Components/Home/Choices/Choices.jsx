@@ -5,6 +5,7 @@ import {Italiana} from "next/font/google";
 import {Public_Sans} from "next/font/google";
 import img from '../../../../public/img/choices/1.png';
 import SectionTitle from "@/Components/SectionTitle/SectionTitle";
+import LinkComp from "@/Components/Link/Link";
 
 
 const italiana = Italiana({subsets: ['latin'], weight: '400'})
@@ -36,6 +37,9 @@ const Choices = () => {
                             {/*<Link href={'/'} className={styles.choiceLink}>*/}
                             {/*    Shop Now*/}
                             {/*</Link>*/}
+                            <LinkComp bigLine href={'/'} color={'white'} size={18}>
+                                Shop Now
+                            </LinkComp>
                         </div>
                     </div>
                 </div>

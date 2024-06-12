@@ -10,8 +10,9 @@ import img5 from '../../../../public/img/available/5.png';
 import img6 from '../../../../public/img/available/6.png';
 import Link from "next/link";
 import {Public_Sans} from "next/font/google";
+import LinkComp from "@/Components/Link/Link";
 
-const publicSans = Public_Sans({subsets: ['latin'], weight: '100'})
+const publicSans = Public_Sans({subsets: ['latin'], weight: ['100', '300']})
 
 const availableImages = [
     {
@@ -72,7 +73,7 @@ const Available = () => {
                                             </div>
                                         </div>
                                         <div className={styles.availableCardText}>
-                                            <p className={`${publicSans.className} f-18`}>
+                                            <p className={`${publicSans.className} f-18 f-18--100`}>
                                                 Midi Dress
                                             </p>
                                         </div>
@@ -81,6 +82,13 @@ const Available = () => {
                             })
                         }
                     </div>
+                    <LinkComp href={'/'} color={'black'} size={24}>
+                        See more
+                    </LinkComp>
+
+                        {/*<Link href={'/'} className={`${styles.availableMoreLink} ${publicSans.className}`}>*/}
+                        {/*    See More*/}
+                        {/*</Link>*/}
                 </div>
             </div>
         </section>

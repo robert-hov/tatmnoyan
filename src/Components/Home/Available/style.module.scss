@@ -45,8 +45,19 @@
 
 .availableContent {
   width: 100%;
+  margin-bottom: 3.25rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 7.562rem;
   grid-row-gap: 3.25rem;
+}
+
+.availableMoreLink {
+  display: block;
+
+  color: var(--black);
+
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
 }
