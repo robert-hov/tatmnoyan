@@ -3,9 +3,9 @@ import BreadCrumb from "@/Components/Breadcrumb/BreadCrumb";
 
 const Page = () => {
     return (
-        <>
-            <BreadCrumb title={'Lookbook'}/>
-        </>
+        <div>
+           <BreadCrumb />
+        </div>
     );
 };
 

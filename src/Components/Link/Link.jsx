@@ -20,7 +20,7 @@ const LinkComp = ({href, color, size, bigLine = false, children}) => {
                     className={styles.linkLine}
                     style={{
                         backgroundColor: color,
-                        width: bigLine ? 'calc(100% + 1rem)' : '100%'
+                        // width: bigLine ? 'calc(100% + 1rem)' : '100%'
                     }}
                 />
             </span>

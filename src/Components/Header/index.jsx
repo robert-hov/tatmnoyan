@@ -19,7 +19,7 @@ const Header = () => {
                 </Link>
                 <ul className={styles.loginList}>
                     <li className={styles.loginItem}>
-                        <Link className={'f-18 f-18--200'} href={'/contact'}>
+                        <Link className={'f-18 f-18--200'} href={'/contact-us'}>
                             Contact us
                         </Link>
                     </li>

@@ -31,9 +31,6 @@ const Founder = () => {
                     <p className={`${styles.founderDesc} ${publicSans.className} f-18`}>
                         Meet Tatev Mnoyan. For our founder, fashion is more than just fabric and stitches; its a canvas for storytelling.  Through her leadership, Itstatmnoyan has become more than a brand; its a movement towards mindful living. Explore our collections and experience Tatevs vision come to life.
                     </p>
-                    <LinkComp color={'white'} size={20} href={'/'}>
-                        sajmd
-                    </LinkComp>
                 </div>
             </div>
         </section>

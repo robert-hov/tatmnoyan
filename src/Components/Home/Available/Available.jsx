@@ -77,6 +77,7 @@ const Available = () => {
                                                 Midi Dress
                                             </p>
                                         </div>
+                                        <span></span>
                                     </Link>
                                 )
                             })

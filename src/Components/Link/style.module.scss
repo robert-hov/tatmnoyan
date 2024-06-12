@@ -4,6 +4,11 @@
 
 .linkText {
   position: relative;
+
+
+  &:hover .linkLine {
+    width: calc(100% + 1rem);
+  }
 }
 
 .linkLine {
@@ -12,6 +17,8 @@
   top: calc(100% + 0.5rem);
   left: 0;
   right: 0;
-  width: calc(100% + 1rem);
+  width: 100%;
   height: 1px;
+  transition: 400ms width;
+
 }

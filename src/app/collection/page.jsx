@@ -1,9 +1,12 @@
+'use client'
 import React from 'react';
+import BreadCrumb from "@/Components/Breadcrumb/BreadCrumb";
 
 export default function Page() {
     return (
-            <h1>
-                COLLECTION PAGE
-            </h1>
+        <>
+            <BreadCrumb title={'Corset with skirt'}/>
+
+        </>
     );
 };
