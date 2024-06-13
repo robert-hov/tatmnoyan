@@ -29,9 +29,11 @@ const New = () => {
                             new <br/> collection
                         </SectionTitle>
                     </div>
-                    <LinkComp bigLine href={'/'} color={'black'} size={18}>
-                        Shop Now
-                    </LinkComp>
+                    <div className={styles.newLink}>
+                        <LinkComp bigLine href={'/'} color={'black'} size={18}>
+                            Shop Now
+                        </LinkComp>
+                    </div>
                 </div>
             </div>
         </section>

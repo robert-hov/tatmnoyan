@@ -1,0 +1,50 @@
+.lookbookContainer {
+  width: 94.444%;
+  margin: 0 auto 4.5rem;
+}
+
+.lookbook {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1.312rem;
+  grid-row-gap: 3.687rem;
+}
+
+.lookCard {
+  text-decoration: none;
+
+  &:nth-child(4n + 4) {
+    grid-column: span 3;
+    //grid-row: span 2;
+
+    .lookImg::after {
+      padding-top: 50.661%;
+    }
+  }
+}
+
+.lookContent {
+  padding-top: 0.687rem;
+
+  p {
+    color: black;
+
+    font-size: 1rem;
+    font-weight: 200;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 0.175rem;
+  }
+}
+
+.lookImg {
+  position: relative;
+  width: 100%;
+
+  &::after {
+    content: "";
+    display: block;
+    padding-top: 150.909%;
+  }
+}

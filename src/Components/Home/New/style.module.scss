@@ -29,10 +29,15 @@
 .newContent {
   display: flex;
   flex-direction: column;
-  width: 43.888%;
+  //width: 43.888%;
   margin-right: 4.062rem;
 }
 
 .newTitle {
   margin-bottom: 1.812rem;
+}
+
+.newLink {
+  align-self: flex-end;
+  width: 151px;
 }

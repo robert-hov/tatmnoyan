@@ -1,0 +1,44 @@
+.collectionContainer {
+  width: 94.44%;
+  margin: 0 auto 4.375rem;
+}
+
+.collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1.25rem;
+  grid-row-gap: 4.25rem;
+}
+
+.collectionCard {
+  position: relative;
+  width: 100%;
+
+  &::after {
+    content: "";
+    display: block;
+    padding-top: 169.318%;
+  }
+
+  &:hover {
+    .collectionCardBg {
+      opacity: .7;
+    }
+  }
+}
+
+.collectionCardBg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  opacity: 0;
+  transition: opacity 400ms;
+}
