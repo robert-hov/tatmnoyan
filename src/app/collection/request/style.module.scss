@@ -6,7 +6,7 @@
 
 .request {
   width: 70.448%;
-  padding: 8.062rem 5.693% 17.25rem;
+  padding: 11.355% 5.693% 24.295%;
   background-color: #DAD6CF;
 
   animation: requestFadeIn 1500ms linear;
@@ -64,7 +64,8 @@
 
   transform: translateY(-50%);
   width: 43.711%;
-  animation: requestImgAnim 1500ms ease-in;
+  max-width: 31.25rem;
+  animation: requestImgAnim 1500ms linear;
 
   &::after {
     content: "";
