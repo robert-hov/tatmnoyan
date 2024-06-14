@@ -1,0 +1,98 @@
+.requestWrapper {
+  position: relative;
+  width: 78.958%;
+  margin: 0 auto 4.375rem;
+}
+
+.request {
+  width: 70.448%;
+  padding: 8.062rem 5.693% 17.25rem;
+  background-color: #DAD6CF;
+
+  animation: requestFadeIn 1500ms linear;
+}
+
+.inputs {
+  width: 80.178%;
+  margin-bottom: 2.812rem;
+}
+
+.inputCard {
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: 2.187rem;
+  }
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 0.625rem;
+
+  color: var(--black);
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #616264;
+  border-radius: 0.125rem;
+
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.inputTextArea {
+  height: 8.5rem;
+  resize: none;
+}
+
+.label {
+
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.formBtnWrapper {
+  margin-left: 2.5rem;
+}
+
+.requestImg {
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  transform: translateY(-50%);
+  width: 43.711%;
+  animation: requestImgAnim 1500ms ease-in;
+
+  &::after {
+    content: "";
+    display: block;
+    padding-top: 155.533%;
+  }
+}
+
+@keyframes requestFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes requestImgAnim {
+  0% {
+    right: -30%;
+    opacity: 0;
+  }
+  50% {
+    right: -15%;
+    opacity: .5;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}

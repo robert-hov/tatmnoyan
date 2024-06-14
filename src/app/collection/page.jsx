@@ -43,7 +43,7 @@ export default function Page() {
                     {
                         collectionData.map((elem, index) => {
                             return (
-                                <Link key={index} className={styles.collectionCard} href={elem.href}>
+                                <div key={index} className={styles.collectionCard}>
                                     <div className="img-container">
                                         <Image
                                             src={elem.img}
@@ -57,13 +57,13 @@ export default function Page() {
                                             <LinkComp
                                                 size={18}
                                                 color={'black'}
-                                                href={elem.href}
+                                                href={'/collection/request'}
                                             >
                                                 Request
                                             </LinkComp>
                                         </div>
                                     </div>
-                                </Link>
+                                </div>
                             )
                         })
                     }

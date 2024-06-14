@@ -13,15 +13,15 @@ const BreadCrumb = ({title}) => {
     const pathname = usePathname();
     const segments = pathname.split('/')
 
-
+console.log(segments)
     return (
         <div className={styles.breadcrumbContainer}>
             <div className={styles.breadcrumb}>
-                <h3 className={styles.title}>
+                <div className={styles.title}>
                     <SectionTitle color={'black'} size={50}>
-                        {segments[1].split('-').length > 1 ? segments[1].replace('-', ' ') : segments[1]}
+                        {segments[segments.length - 1].split('-').length > 1 ? segments[1].replace('-', ' ') : segments[segments.length - 1]}
                     </SectionTitle>
-                </h3>
+                </div>
                 <div className={styles.paths}>
                     <Link href={'/'} className={`${styles.pathLink} ${publicSans.className}`}>home</Link>
 
