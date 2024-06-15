@@ -11,6 +11,7 @@ import img6 from '../../../../public/img/available/6.png';
 import Link from "next/link";
 import {Public_Sans} from "next/font/google";
 import LinkComp from "@/Components/Link/Link";
+import {motion} from "framer-motion";
 
 const publicSans = Public_Sans({subsets: ['latin'], weight: ['100', '300']})
 
@@ -46,6 +47,20 @@ const availableImages = [
         href: '/',
     },
 ]
+
+const cardVariants = {
+    offscreen: {
+        y: 300
+    },
+    onscreen: {
+        y: 0,
+        transition: {
+            type: "spring",
+            bounce: 0.4,
+            duration: 0.8
+        }
+    }
+};
 const Available = () => {
     return (
         <section className={styles.available}>
@@ -56,29 +71,48 @@ const Available = () => {
                             available now
                         </SectionTitle>
                     </div>
+                    {/*<motion.div*/}
+                    {/*    className={styles.availableContent}*/}
+                    {/*    initial="offscreen"*/}
+                    {/*    whileInView="onscreen"*/}
+                    {/*    // transition={{ease: "linear", duration: 0.8}}*/}
+                    {/*    viewport={{once: true, amount: 0.2}}*/}
+                    {/*>*/}
+                    <div
+                        className={styles.availableContent}
+                    >
 
-                    <div className={styles.availableContent}>
                         {
                             availableImages.map((elem, index) => {
                                 return (
-                                    <Link key={index} href={elem.href} className={styles.availableCard}>
-                                        <div className={styles.availableCardImg}>
-                                            <div className="img-container">
-                                                <Image
-                                                    src={elem.img}
-                                                    alt={elem.alt}
-                                                    width={325}
-                                                    height={393}
-                                                />
+                                    <motion.div
+                                        key={index}
+                                        initial="offscreen"
+                                        whileInView="onscreen"
+                                        viewport={{once: true, amount: 0.2}}
+
+                                        variants={cardVariants}
+                                        className={styles.availableCardMotion}
+                                    >
+                                        <Link key={index} href={elem.href} className={styles.availableCard}>
+                                            <div className={styles.availableCardImg}>
+                                                <div className="img-container">
+                                                    <Image
+                                                        src={elem.img}
+                                                        alt={elem.alt}
+                                                        width={325}
+                                                        height={393}
+                                                    />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className={styles.availableCardText}>
-                                            <p className={`${publicSans.className} f-18 f-18--100`}>
-                                                Midi Dress
-                                            </p>
-                                        </div>
-                                        <span></span>
-                                    </Link>
+                                            <div className={styles.availableCardText}>
+                                                <p className={`${publicSans.className} f-18 f-18--100`}>
+                                                    Midi Dress
+                                                </p>
+                                            </div>
+                                            <span></span>
+                                        </Link>
+                                    </motion.div>
                                 )
                             })
                         }
@@ -87,9 +121,9 @@ const Available = () => {
                         See more
                     </LinkComp>
 
-                        {/*<Link href={'/'} className={`${styles.availableMoreLink} ${publicSans.className}`}>*/}
-                        {/*    See More*/}
-                        {/*</Link>*/}
+                    {/*<Link href={'/'} className={`${styles.availableMoreLink} ${publicSans.className}`}>*/}
+                    {/*    See More*/}
+                    {/*</Link>*/}
                 </div>
             </div>
         </section>
