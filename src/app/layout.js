@@ -1,12 +1,13 @@
 'use client'
 import {Inter} from "next/font/google";
 import "./globals.scss";
-import React, {Suspense, useState} from "react";
+import React, {Suspense, useEffect, useState} from "react";
 import Loading from "./loading";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import SVG from "../Components/SVG";
 import {useMotionValueEvent, useScroll} from "framer-motion";
+import {usePathname} from "next/navigation";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -16,10 +17,22 @@ const inter = Inter({subsets: ["latin"]});
 // };
 
 export default function RootLayout({children}) {
+    const pathname = usePathname();
+    const segments = pathname.split('/');
+
     const [scrolled, setScrolled] = useState(false);
     const {scrollY} = useScroll();
+   useEffect(() => {
+       console.log('')
+       if (segments.join('').length > 0 || scrollY.current > 50) return setScrolled(true)
+
+       setScrolled(false)
+   }, [pathname])
     useMotionValueEvent(scrollY, "change", (latest) => {
-        if (scrollY.current > 15) {
+        if (segments.join('').length > 0) return setScrolled(true)
+
+
+        if (scrollY.current > 50) {
             setScrolled(true)
         } else {
             setScrolled(false)
