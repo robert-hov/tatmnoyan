@@ -1,5 +1,6 @@
 .hero {
   position: relative;
+  height: 80vh;
   width: 100%;
   background-image: url("../../../../public/img/hero.png");
   background-repeat: no-repeat;
@@ -11,6 +12,11 @@
     content: '';
     display: block;
     padding-top: 46.944%;
+  }
+
+  &::before {
+    content: '';
+
   }
 }
 

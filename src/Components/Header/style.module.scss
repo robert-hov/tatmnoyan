@@ -1,8 +1,20 @@
 .header {
+  position: fixed;
+  top: -6rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
+  transition: all 500ms;
+
 
   background-color: var(--alabaster);
+
+  &.scrolled {
+    top: 0;
+  }
 }
 
 .headerContainer {
@@ -17,21 +29,37 @@
 
 .logo {
   display: block;
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 5rem;
   left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  width: 36.388%;
+  transform: translateX(-50%);
+  width: 75%;
+  transition: all 500ms;
 
   &::after {
     content: "";
     display: block;
-    padding-top: 8.394%;
+    padding-top: 8.375%;
   }
 
   svg {
-    fill: var(--black);
+    fill: var(--white-50);
+    width: 100%;
+    height: 100%;
   }
+
+  &.scrolled {
+    top: 2rem;
+    width: 27.353%;
+
+    svg {
+      fill: var(--black);
+    }
+  }
+}
+
+.scrolled {
+  position: fixed;
 }
 
 .loginList {

@@ -25,6 +25,8 @@ html {
 }
 
 body {
+  position: relative;
+  //margin-top: 6rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

@@ -3,14 +3,14 @@ import styles from './style.module.scss';
 import Nav from "../Header/Nav";
 import Link from "next/link";
 
-const Header = () => {
+const Header = ({scrolled}) => {
     return (
-        <header className={styles.header}>
+        <header className={`${styles.header}${scrolled ? ` ${styles.scrolled}` : ' '}`}>
             <div className={styles.headerContainer}>
                 <div className={styles.navContainer}>
-                    <Nav/>
+                    <Nav />
                 </div>
-                <Link href={'/'} className={styles.logo}>
+                <Link href={'/'} className={`${styles.logo}${scrolled ? ` ${styles.scrolled}` : ' '}`}>
                     <div className="img-container">
                         <svg className="icon">
                             <use xlinkHref="#logo"/>

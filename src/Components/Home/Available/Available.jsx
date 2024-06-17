@@ -50,13 +50,13 @@ const availableImages = [
 
 const cardVariants = {
     offscreen: {
-        y: 300
+        y: 500
     },
     onscreen: {
         y: 0,
         transition: {
             type: "spring",
-            bounce: 0.4,
+            bounce: 0.2,
             duration: 0.8
         }
     }
@@ -78,22 +78,22 @@ const Available = () => {
                     {/*    // transition={{ease: "linear", duration: 0.8}}*/}
                     {/*    viewport={{once: true, amount: 0.2}}*/}
                     {/*>*/}
-                    <div
-                        className={styles.availableContent}
+                    <motion.div
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        viewport={{once: true, amount: 0.01}}
+                        variants={cardVariants}
+                        className={styles.availableCardMotion}
                     >
+                        <div
+                            className={styles.availableContent}
+                        >
 
-                        {
-                            availableImages.map((elem, index) => {
-                                return (
-                                    <motion.div
-                                        key={index}
-                                        initial="offscreen"
-                                        whileInView="onscreen"
-                                        viewport={{once: true, amount: 0.2}}
 
-                                        variants={cardVariants}
-                                        className={styles.availableCardMotion}
-                                    >
+                            {
+                                availableImages.map((elem, index) => {
+                                    return (
+
                                         <Link key={index} href={elem.href} className={styles.availableCard}>
                                             <div className={styles.availableCardImg}>
                                                 <div className="img-container">
@@ -112,11 +112,11 @@ const Available = () => {
                                             </div>
                                             <span></span>
                                         </Link>
-                                    </motion.div>
-                                )
-                            })
-                        }
-                    </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </motion.div>
                     <LinkComp href={'/'} color={'black'} size={24}>
                         See more
                     </LinkComp>

@@ -6,24 +6,34 @@ import Founder from "../Components/Home/Founder/Founder";
 import New from "../Components/Home/New/New";
 import React, {Suspense, useEffect, useRef, useState} from "react";
 import Loading from "./loading";
-import {motion, useScroll} from "framer-motion";
+import {motion, useMotionValueEvent, useScroll} from "framer-motion";
 
 
 export default function Home() {
-    const {scrollYProgress} = useScroll();
-
+    const [offsetY, setOffsetY] = useState();
+    const {scrollY} = useScroll();
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        if (scrollY.current < 500) {
+            setOffsetY(-scrollY.current * 1.5)
+        }
+    })
     return (
         <>
-            <motion.div style={{scaleX: scrollYProgress}}/>
-            <motion.div style={{transform: `translate(0, ${-scrollYProgress.current}px)`}}>
-                <Suspense fallback={<Loading/>}>
-                    <Hero/>
+            <Suspense fallback={<Loading/>}>
+                <Hero/>
+                <motion.div
+                    style={{translateY: `${offsetY}px`}}
+                >
                     <Choices/>
+                </motion.div>
+                <div
+                    style={{marginTop: `${offsetY}px`}}
+                >
                     <Available/>
-                    <Founder/>
-                    <New/>
-                </Suspense>
-            </motion.div>
+                </div>
+                <Founder/>
+                <New/>
+            </Suspense>
         </>
     )
         ;
