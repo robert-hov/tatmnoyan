@@ -24,6 +24,11 @@
   margin-bottom: 1.125rem;
   background-color: #D9D9D9;
 
+  iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
   &::after {
     content: "";
     display: block;
