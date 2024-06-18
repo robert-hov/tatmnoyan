@@ -88,6 +88,10 @@
       transition: all 0.4s ease;
     }
 
+    .btnText {
+      transform: translateX(-40px);
+    }
+
     .btnText::before {
       width: 100%;
       max-width: 100%;

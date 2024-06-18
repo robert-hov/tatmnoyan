@@ -32,7 +32,8 @@
 }
 
 .contactMapLink {
-  align-self: flex-end;
+  //align-self: flex-end;
+  margin-left: 2.5rem;
 }
 
 .contactSmm {
@@ -51,8 +52,9 @@
 
 .smmItemHeader {
   display: flex;
-  align-self: center;
+  //align-self: center;
   margin-bottom: 0.5rem;
+  margin-left: 2.5rem;
 }
 
 .smmItemIcon {

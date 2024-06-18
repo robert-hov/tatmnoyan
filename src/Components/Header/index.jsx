@@ -24,7 +24,7 @@ const Header = ({scrolled}) => {
                         </Link>
                     </li>
                     <li className={`${styles.loginItem}`}>
-                        <Link href={'/'} className={styles.loginCartLogo}>
+                        <Link href={'/shopping-cart'} className={styles.loginCartLogo}>
                         <div className="img-container">
                             <svg className="icon">
                                 <use xlinkHref="#cart" />

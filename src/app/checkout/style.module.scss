@@ -1,0 +1,183 @@
+.checkout {
+  padding-top: 1.812rem;
+  padding-bottom: 6.25rem;
+}
+
+.checkoutContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 93.958%;
+  margin: 0 auto;
+}
+
+.tabsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 46.119%;
+}
+
+.tabsBtnContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tabBtn {
+  position: relative;
+  display: block;
+  width: 47.435%;
+  margin-bottom: 0.812rem;
+
+  color: var(--black);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  opacity: 0.5;
+  transition: opacity 400ms;
+
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-align: start;
+
+  &.active {
+    opacity: 1;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0.312rem;
+    background-color: var(--black);
+    border-radius: 1rem;
+  }
+}
+
+.tabsSaveContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cancelBtn {
+  margin-right: 3.812rem;
+
+  color: var(--black);
+
+  font-size: 1.125rem;
+  font-weight: 200;
+  text-decoration: none;
+}
+
+.continueBtn {
+  color: var(--black);
+
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--black);
+  cursor: pointer;
+
+  font-size: 1.125rem;
+  font-weight: 200;
+}
+
+
+.sumContainer {
+  display: flex;
+  flex-direction: column;
+  width: 33.998%;
+}
+
+.sumTitle {
+  margin-bottom: 1.312rem;
+
+  color: var(--black);
+
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.sumProdList {
+  display: flex;
+  flex-direction: column;
+
+  list-style-type: none;
+}
+
+.sumProdItem {
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: 2.062rem;
+  }
+}
+
+.sumProdImg {
+  position: relative;
+  width: 24.782%;
+
+  &::after {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+.sumProdContent {
+  color: var(--black);
+
+  font-size: 1.125rem;
+  font-weight: 100;
+
+  h4 {
+    margin-bottom: 0.812rem;
+    font-weight: 100;
+  }
+}
+
+.finalPriceWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2.062rem;
+
+  font-size: 1.125rem;
+  font-weight: 100;
+}
+
+.deliveryContainer,
+.totalContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalContainer {
+  b {
+    font-weight: 400;
+  }
+}
+
+.finalLine {
+  width: 100%;
+  height: 1px;
+  margin: 1.25rem 0;
+
+  background-color: var(--black);
+}
+
+
+

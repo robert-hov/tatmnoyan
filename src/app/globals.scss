@@ -33,6 +33,10 @@ body {
   overflow-x: hidden;
 
   background-color: var(--alabaster);
+
+  &.inner-page {
+    margin-top: 6rem;
+  }
 }
 
 .page-container {

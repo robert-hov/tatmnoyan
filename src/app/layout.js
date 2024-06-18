@@ -22,8 +22,14 @@ export default function RootLayout({children}) {
 
     const [scrolled, setScrolled] = useState(false);
     const {scrollY} = useScroll();
+    const [innerPage, setInnerPage] = useState(false);
    useEffect(() => {
-       console.log('')
+       if (segments.join('').length > 0) {
+           setInnerPage(true)
+       } else  {
+           setInnerPage(false)
+       }
+
        if (segments.join('').length > 0 || scrollY.current > 50) return setScrolled(true)
 
        setScrolled(false)
@@ -40,7 +46,7 @@ export default function RootLayout({children}) {
     })
     return (
         <html lang="en">
-        <body className={inter.className}>
+        <body className={`${inter.className}${innerPage ? ` inner-page` : ''}`}>
         <SVG />
         <Header scrolled={scrolled}/>
             {children}
