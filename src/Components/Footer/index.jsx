@@ -20,7 +20,7 @@ const Footer = () => {
                         </Link>
                     </li>
                     <li className={styles.footerNavLink}>
-                        <Link className={'f-18 f-18--200'} href={'/'}>
+                        <Link scroll={true} className={'f-18 f-18--200'} href={'/collection'}>
                             Collection
                         </Link>
                     </li>
@@ -30,7 +30,7 @@ const Footer = () => {
                         </Link>
                     </li>
                     <li className={styles.footerNavLink}>
-                        <Link className={'f-18 f-18--200'} href={'/'}>
+                        <Link className={'f-18 f-18--200'} href={'/lookbook'}>
                             Lookbook
                         </Link>
                     </li>
@@ -40,7 +40,7 @@ const Footer = () => {
                         </Link>
                     </li>
                     <li className={styles.footerNavLink}>
-                        <Link className={'f-18 f-18--200'} href={'/'}>
+                        <Link className={'f-18 f-18--200'} href={'/contact-us'}>
                             contact us
                         </Link>
                     </li>

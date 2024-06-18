@@ -1,0 +1,45 @@
+.final {
+  padding-top: 3.437rem;
+  padding-bottom: 13.375rem;
+  background-image: url("../../../public/img/final.png");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.finalContainer {
+  background-color: var(--black-70);
+  padding-top: 5.062rem;
+  padding-bottom: 5.125rem;
+  padding-left: 17.361%;
+  padding-right: 17.361%;
+}
+
+.finalContent {
+  display: flex;
+  flex-direction: column;
+  width: 51.808%;
+}
+
+.finalTitleWrapper {
+  margin-bottom: 1.5rem;
+
+}
+
+.finalDesc {
+  margin-bottom: 1.625rem;
+
+  color: var(--white);
+
+  font-size: 1.125rem;
+  font-weight: 200;
+
+  b {
+    font-weight: 500;
+  }
+}
+
+.finalBtn {
+  width: 164px;
+  margin-left: 2.5rem;
+}
+

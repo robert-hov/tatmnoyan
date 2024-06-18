@@ -9,6 +9,9 @@ import img5 from "../../../public/img/lookbook/5.png";
 import Image from "next/image";
 import styles from "./style.module.scss";
 import ShoppingQuantity from "@/app/shopping-cart/shoppingQuantity";
+import Checkbox from "@/Components/Checkbox/Checkbox";
+import LinkComp from "@/Components/Link/Link";
+import {Public_Sans} from "next/font/google";
 
 const shoppingListData = [
     {
@@ -49,6 +52,8 @@ const shoppingListData = [
 
 ]
 
+const publicSans = Public_Sans({subsets: ['latin'], weight: ['200', '400']})
+
 const Page = () => {
     const [quantity, setQuantity] = useState(1);
 
@@ -70,8 +75,10 @@ const Page = () => {
                     return (
                         <li key={index} className={styles.prodItem}>
                             <div className={styles.prodItemContainer}>
+                                <div className={styles.prodCheck}>
+                                    <Checkbox/>
+                                </div>
 
-                                <input className={styles.prodCheck} type="checkbox"/>
                                 <div className={styles.prodImg}>
                                     <div className="img-container">
                                         <Image
@@ -105,7 +112,7 @@ const Page = () => {
                                         <button className={`${styles.prodQuantityBtn}`}
                                                 onClick={decrementQuantity}>-
                                         </button>
-                                        <ShoppingQuantity quantity={quantity} />
+                                        <ShoppingQuantity quantity={quantity}/>
                                         <button className={`${styles.prodQuantityBtn}`}
                                                 onClick={incrementQuantity}>+
                                         </button>
@@ -123,6 +130,19 @@ const Page = () => {
                     )
                 })}
             </ul>
+            <div className={styles.shopCheck}>
+                <div className={styles.shopCheckContent}>
+                    <h4 className={`${styles.shopCheckTitle} ${publicSans.className}`}>
+                        Total: 480.000 AMD
+                    </h4>
+                    <p className={`${styles.shopCheckDesc} ${publicSans.className}`}>
+                        Tax included and shipping and discounts calculated at checkout
+                    </p>
+                    <div className={styles.shopCheckBtn}>
+                        <LinkComp href={'/checkout'} color={'black'} size={18}>Check Out</LinkComp>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

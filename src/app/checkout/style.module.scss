@@ -29,11 +29,10 @@
   margin-bottom: 0.812rem;
 
   color: var(--black);
-  cursor: pointer;
   border: none;
   outline: none;
   background-color: transparent;
-  opacity: 0.5;
+  opacity: 1;
   transition: opacity 400ms;
 
   font-size: 1.125rem;
@@ -41,7 +40,15 @@
   text-align: start;
 
   &.active {
-    opacity: 1;
+    color: var(--green);
+
+    &::after {
+      background-color: var(--green);
+    }
+  }
+
+  &.disabled {
+    opacity: .5;
   }
 
   &::after {
@@ -84,6 +91,7 @@
 
   font-size: 1.125rem;
   font-weight: 200;
+  text-decoration: none;
 }
 
 

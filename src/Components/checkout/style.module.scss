@@ -1,0 +1,114 @@
+.deliveryContainer {
+  padding-top: 2.687rem;
+  padding-bottom: 2.375rem;
+}
+
+.deliveryTitle {
+  margin-bottom: 0.312rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.deliveryInstruction {
+  margin-bottom: 3.375rem;
+
+  font-size: 1.125rem;
+  font-weight: 200;
+}
+.paymentContainer {
+  padding-top: 2.687rem;
+  padding-bottom: 2.375rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 2.375rem;
+}
+
+.inputRow {
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: 1.125rem;
+  }
+}
+
+.inputWrapper {
+  width: 100%;
+
+  &.small {
+    width: 47.115%;
+  }
+}
+
+.label {
+  display: block;
+
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 0.625rem;
+
+  background-color: transparent;
+  border: 1px solid var(--black);
+  outline: none;
+
+  font-size: 1rem;
+}
+
+.paymentTitle {
+  margin-bottom: 2.187rem;
+
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.tabsSaveContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cancelBtn {
+  margin-right: 3.812rem;
+
+  color: var(--black);
+
+  font-size: 1.125rem;
+  font-weight: 200;
+  text-decoration: none;
+}
+
+.continueBtn {
+  color: var(--black);
+
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--black);
+  cursor: pointer;
+
+  font-size: 1.125rem;
+  font-weight: 200;
+}
+
+.helper {
+  display: flex;
+  margin-top: 1.812rem;
+
+  label {
+    font-size: 0.875rem;
+    font-weight: 200;
+  }
+}
+
+.checkWrapper {
+  margin-right: 0.625rem;
+}

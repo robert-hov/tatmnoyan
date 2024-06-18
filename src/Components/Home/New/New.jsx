@@ -30,7 +30,7 @@ const New = () => {
                         </SectionTitle>
                     </div>
                     <div className={styles.newLink}>
-                        <LinkComp bigLine href={'/'} color={'black'} size={18}>
+                        <LinkComp bigLine href={'/collection'} color={'black'} size={18}>
                             Shop Now
                         </LinkComp>
                     </div>

@@ -8,6 +8,7 @@ const LinkComp = ({href, color, size, bigLine = false, children}) => {
     return (
 
         <Link
+            scroll={true}
             className={`${styles.btn}${color === 'black' ? ` ${styles.black}` : ''} `}
             href={href}
         >

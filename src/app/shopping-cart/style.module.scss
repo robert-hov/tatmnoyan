@@ -20,10 +20,7 @@
 }
 
 .prodCheck {
-  display: block;
   margin-right: 3.843rem;
-  width: 1rem;
-  height: 1rem;
 }
 
 .prodImg {
@@ -134,4 +131,40 @@
   svg {
     fill: var(--black);
   }
+}
+
+.shopCheck {
+  padding-top: 3.875rem;
+  padding-left: 7.5rem;
+  padding-right: 7.5rem;
+  padding-bottom: 4.375rem;
+}
+
+.shopCheckContent {
+  display: flex;
+  flex-direction: column;
+
+  width: 31.083%;
+}
+
+.shopCheckTitle {
+  margin-bottom: 0.75rem;
+
+  color: var(--black);
+
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.shopCheckDesc {
+  margin-bottom: 1.75rem;
+
+  color: var(--black);
+
+  font-size: 1.25rem;
+  font-weight: 200;
+}
+
+.shopCheckBtn {
+  align-self: flex-end;
 }

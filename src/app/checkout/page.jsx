@@ -4,8 +4,8 @@ import styles from './style.module.scss';
 import Image from "next/image";
 import img1 from "../../../public/img/lookbook/1.png";
 import img2 from "../../../public/img/lookbook/2.png";
-import Delivery from "@/Components/Delivery/Delivery";
-import Payment from "@/Components/Payment/Payment";
+import Delivery from "@/Components/checkout/Delivery/Delivery";
+import Payment from "@/Components/checkout/Payment/Payment";
 import Link from "next/link";
 import {Public_Sans} from "next/font/google";
 
@@ -13,40 +13,43 @@ const publicSans = Public_Sans({subsets: ['latin'], weight: ['200', '100', '400'
 
 const Page = () => {
     const [activeTab, setActiveTab] = useState('tab1')
-    const tabHandler = ({tab}) => {
-        setActiveTab(tab)
-    }
     return (
         <div className={styles.checkout}>
             <div className={styles.checkoutContainer}>
                 <div className={styles.tabsContainer}>
                     <div className={styles.tabsBtnContainer}>
-                        <button className={`${styles.tabBtn}${activeTab === 'tab1' ? ` ${styles.active}` : ''}`} onClick={() => setActiveTab('tab1')}>
+                        <div className={`${styles.tabBtn}${activeTab === 'tab2' ? ` ${styles.active}` : ''}`}>
                             1. Delivery
-                        </button>
-                        <button className={`${styles.tabBtn}${activeTab === 'tab2' ? ` ${styles.active}` : ''}`} onClick={() => setActiveTab('tab2')}>
+                        </div>
+                        <div className={`${styles.tabBtn}${activeTab === 'tab1' ? ` ${styles.disabled}` : ''}`}>
                             2. Payment
-                        </button>
+                        </div>
                     </div>
-                    <div style={{height: '29.5rem'}}>
-                        {
-                            activeTab === 'tab1' && (
-                                <Delivery/>
-                            )
-                        }
-                        {
-                            activeTab === 'tab2' && (
-                                <Payment/>
-                            )
-                        }
-                    </div>
+                    {
+                        activeTab === 'tab1' && (
+                            <Delivery/>
+                        )
+                    }
+                    {
+                        activeTab === 'tab2' && (
+                            <Payment/>
+                        )
+                    }
                     <div className={styles.tabsSaveContainer}>
                         <Link href={'/'} className={styles.cancelBtn}>
                             Cancel
                         </Link>
-                        <button className={styles.continueBtn} onClick={() => setActiveTab('tab2')}>
-                            Save and Continue
-                        </button>
+                        {
+                            activeTab === 'tab1' ? (
+                                <button className={styles.continueBtn} onClick={() => setActiveTab('tab2')}>
+                                    Continue
+                                </button>
+                            ) : (
+                                <Link className={styles.continueBtn} href={'/final'}>
+                                    Save and Continue
+                                </Link>
+                            )
+                        }
                     </div>
                 </div>
                 <div className={styles.sumContainer}>
@@ -88,7 +91,7 @@ const Page = () => {
                             <p>Delivery</p>
                             <p>2000 AMD</p>
                         </div>
-                        <div className={styles.finalLine} />
+                        <div className={styles.finalLine}/>
                         <div className={styles.totalContainer}>
                             <b>Total</b>
                             <p>272.000 AMD</p>
