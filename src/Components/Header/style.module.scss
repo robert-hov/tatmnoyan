@@ -51,6 +51,7 @@
   &.scrolled {
     top: 2rem;
     width: 27.353%;
+    max-width: 400px;
 
     svg {
       fill: var(--black);

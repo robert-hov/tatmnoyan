@@ -204,13 +204,13 @@ const Page = () => {
                                     </div>
                                     <div className={`${styles.lookContent} ${publicSans.className}`}>
                                         <p>
-                                            {elem.designer}
+                                            Designer - {elem.designer}
                                         </p>
                                         <p>
-                                            {elem.Photographer}
+                                            Photographer - {elem.Photographer}
                                         </p>
                                         <p>
-                                            {elem.model}
+                                            Model - {elem.model}
                                         </p>
                                     </div>
                                 </Link>
