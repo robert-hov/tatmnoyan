@@ -94,7 +94,7 @@ const Page = () => {
                         <div className={styles.finalLine}/>
                         <div className={styles.totalContainer}>
                             <b>Total</b>
-                            <p>272.000 AMD</p>
+                            <p>242.000 AMD</p>
                         </div>
                     </div>
 
